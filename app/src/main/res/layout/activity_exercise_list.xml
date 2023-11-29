@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ExerciseListActivity"
+    android:background="@drawable/fondito2">
+
+    <!-- se agrego una transparencia a la imagen  -->
+
+    <TextView
+        android:id="@+id/tvGroupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+
+        android:text="Ejercicios para:"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
+        android:textColor="#000000"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/white"
+        android:onClick="openOtherActivity"
+        />
+
+    <ListView
+        android:id="@+id/listViewExercises"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+
+        android:textColor="#000000"/>
+
+</LinearLayout>

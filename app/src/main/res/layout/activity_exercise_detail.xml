@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ExerciseDetailActivity"
+    android:background="@drawable/fondito2">
+
+    <TextView
+        android:id="@+id/textViewExerciseDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalles del ejercicio"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:textColor="#8f8e8e"/>
+
+    <ImageView
+        android:id="@+id/imageViewExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="657dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/default_image" />
+
+    <Button
+        android:id="@+id/buttonVolver"
+        android:layout_width="126dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/textViewExerciseDetail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="#ff5757"
+        android:onClick="cerraractividad"
+        android:text="Volver" />
+
+
+
+</RelativeLayout>

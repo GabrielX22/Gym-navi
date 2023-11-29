@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgobje"
+    android:orientation="vertical">
+    <!-- en este layout cambie la familyfont , le agregue una transparencia
+    a la imagen para que se pueda visualizar bien el text, tambien los botones
+    tienen un rojo que deja visualizar mejor el texto blanco -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/baloo"
+        android:text="Acondicionamiento Fisico"
+        android:textColor="#121111"
+        android:textSize="34sp" />
+
+    <Spinner
+        android:id="@+id/spinnerFitnessGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/baloo"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:backgroundTint="#0B0101"
+        android:text="Objetivos"
+        android:textColor="#000000"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxpeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0B0101"
+        android:buttonTint="#F30202"
+        android:fontFamily="@font/baloo"
+        android:text="Perder Peso"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/checkboxmasamuscular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:buttonTint="#FF0000"
+        android:fontFamily="@font/baloo"
+        android:text="Ganar Masa Muscular"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/checkboxresistencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:buttonTint="#FD0505"
+        android:fontFamily="@font/baloo"
+        android:text="Mejorar Resistencia"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <!-- Aquí puedes agregar más checkboxes para otros objetivos -->
+
+    <Button
+        android:id="@+id/btnSaveGoals"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/baloo"
+        android:text="Guardar Objetivos"
+        app:iconTint="#120707" />
+
+    <Button
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="@font/baloo"
+        android:onClick="Volver"
+        android:text="Volver" />
+
+</LinearLayout>

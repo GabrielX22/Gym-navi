@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "660885675035",
+    "project_id": "gymnavi-ff2d7",
+    "storage_bucket": "gymnavi-ff2d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660885675035:android:de8f58a27e85a48548ecbe",
+        "android_client_info": {
+          "package_name": "com.example.register"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe-aIYraym7mkRsqlmP4XVWu60Oph12D4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

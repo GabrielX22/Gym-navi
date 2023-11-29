@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/fondito2"
+    tools:context=".MainActivity">
+
+    <!-- se le agrego opacidad a la imagen se cambio colores de botones y texto tambien
+     se cambio el family font del texto-->
+
+    <ImageView
+        android:id="@+id/profile_image_view"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/select_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/white"
+        android:backgroundTint="#FF0000"
+        android:text="Selecciona Imagen" />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Nuevo Nombre"
+        android:fontFamily="@font/baloo"
+        android:textColor="#000000"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Biografia"
+        android:fontFamily="@font/baloo"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/white"
+        android:backgroundTint="#FF0000"
+        android:text="Guardar" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/white"
+        android:backgroundTint="#FF0000"
+        android:text="Volver" />
+
+</LinearLayout>
