@@ -58,8 +58,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
         android:fontFamily="@font/baloo"
-        android:onClick="abrirmanual"
-        android:text="Manual"
+        android:onClick="abrirmanu"
+        android:text="Ayuda"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/action_item1"
@@ -109,20 +109,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.108" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF0000"
-        android:onClick="openfaqs"
-        android:text="FAQs"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961" />
 
     <ImageButton
         android:id="@+id/lasalida"

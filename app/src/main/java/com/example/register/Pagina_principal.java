@@ -5,22 +5,39 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 /* Aun no usadas
 import android.app.DownloadManager;
 import android.os.Environment;
 import android.content.Context;*/
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Pagina_principal extends AppCompatActivity {
+
+    private GoogleSignInClient mGoogleSignInClient;
+    private GoogleSignInOptions gso;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagina_principal);
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
     // Método para abrir la actividad "ExeActivity" al hacer clic en un botón
@@ -39,16 +56,25 @@ public class Pagina_principal extends AppCompatActivity {
                         startActivity(intent);
                         FirebaseAuth.getInstance().signOut();
                         finish();
+                        mGoogleSignInClient.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                //Abrir MainActivity con SigIn button
+                                if(task.isSuccessful()){
+                                    Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(mainActivity);
+                                    Pagina_principal.this.finish();
+                                }else{
+                                    Toast.makeText(getApplicationContext(), "No se pudo cerrar sesión con google",
+                                            Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
                     }
                 })
                 .setNegativeButton(android.R.string.no, null)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
-    }
-
-    public void openfaqs(View view) {
-        Intent intent = new Intent(this, faqs.class);
-        startActivity(intent);
     }
 
 
@@ -59,13 +85,17 @@ public class Pagina_principal extends AppCompatActivity {
 
     // Método para abrir la actividad "ObjeActivity" al hacer clic en un botón
     public void abriperfil(View view) {
-        Intent intent = new Intent(this, activity_perfil.class);
-        startActivity(intent); // Inicia la actividad PerfilActivity
+         // Inicia la actividad PerfilActivity
     }
 
     public void abrirmanual(View view) {
         String url = "https://www.mediafire.com/file/j7meaymmgn1ipew/Manual+de+usuario+app+Gymnavi.pdf/file";
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
+
+    public void abrirmanu(View view) {
+        Intent intent = new Intent(this, manuales.class);
         startActivity(intent);
     }
 }
